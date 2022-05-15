@@ -21,5 +21,7 @@ drop table MainGrid
 
 insert into MainGrid values ('014302', 'Nikita Poloyko', 10, 8, 7)
 
-select * from MainGrid
+use CourseworkEDairy
+
+select * from MainGrid where GPA > '7'
 
