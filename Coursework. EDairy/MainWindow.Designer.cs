@@ -34,14 +34,17 @@
             this.tabPageGrid = new System.Windows.Forms.TabPage();
             this.materialCard8 = new MaterialSkin.Controls.MaterialCard();
             this.materialTextBoxStatus = new MaterialSkin.Controls.MaterialTextBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
             this.materialCard4 = new MaterialSkin.Controls.MaterialCard();
             this.materialButtonSave = new MaterialSkin.Controls.MaterialButton();
             this.materialButtonEdit = new MaterialSkin.Controls.MaterialButton();
             this.materialButtonDelete = new MaterialSkin.Controls.MaterialButton();
             this.materialButtonNew = new MaterialSkin.Controls.MaterialButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.materialCard3 = new MaterialSkin.Controls.MaterialCard();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.materialTextBoxGPA = new MaterialSkin.Controls.MaterialTextBox();
             this.materialTextBoxInformatics = new MaterialSkin.Controls.MaterialTextBox();
@@ -53,6 +56,9 @@
             this.materialCard2 = new MaterialSkin.Controls.MaterialCard();
             this.dataGridView12 = new System.Windows.Forms.DataGridView();
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
+            this.pictureBoxErase = new System.Windows.Forms.PictureBox();
+            this.pictureBoxRefresh = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.materialTextBoxSearch = new MaterialSkin.Controls.MaterialTextBox();
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.tabPageManagement = new System.Windows.Forms.TabPage();
@@ -60,44 +66,40 @@
             this.materialButtonDelete_Management = new MaterialSkin.Controls.MaterialButton();
             this.materialButtonSaveManagement = new MaterialSkin.Controls.MaterialButton();
             this.materialCard5 = new MaterialSkin.Controls.MaterialCard();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.materialTextBoxSearchManagement = new MaterialSkin.Controls.MaterialTextBox();
             this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
             this.materialCard7 = new MaterialSkin.Controls.MaterialCard();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxErase = new System.Windows.Forms.PictureBox();
-            this.pictureBoxRefresh = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.tabPageGPA = new System.Windows.Forms.TabPage();
             this.materialTabControl1.SuspendLayout();
             this.tabPageGrid.SuspendLayout();
             this.materialCard8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.materialCard4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.materialCard3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.materialCard2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView12)).BeginInit();
             this.materialCard1.SuspendLayout();
-            this.tabPageManagement.SuspendLayout();
-            this.materialCard6.SuspendLayout();
-            this.materialCard5.SuspendLayout();
-            this.materialCard7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxErase)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRefresh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.tabPageManagement.SuspendLayout();
+            this.materialCard6.SuspendLayout();
+            this.materialCard5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.materialCard7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // materialTabControl1
             // 
             this.materialTabControl1.Controls.Add(this.tabPageGrid);
             this.materialTabControl1.Controls.Add(this.tabPageManagement);
+            this.materialTabControl1.Controls.Add(this.tabPageGPA);
             this.materialTabControl1.Depth = 0;
             this.materialTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialTabControl1.ImageList = this.imageList1;
@@ -145,7 +147,7 @@
             // 
             this.materialTextBoxStatus.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.materialTextBoxStatus.Depth = 0;
-            this.materialTextBoxStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.materialTextBoxStatus.Font = new System.Drawing.Font("Roboto", 12F);
             this.materialTextBoxStatus.Hint = "Status";
             this.materialTextBoxStatus.Location = new System.Drawing.Point(17, 91);
             this.materialTextBoxStatus.MaxLength = 50;
@@ -155,6 +157,16 @@
             this.materialTextBoxStatus.Size = new System.Drawing.Size(220, 50);
             this.materialTextBoxStatus.TabIndex = 7;
             this.materialTextBoxStatus.Text = "";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::Coursework.EDairy.Properties.Resources.growth;
+            this.pictureBox4.Location = new System.Drawing.Point(17, 17);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 6;
+            this.pictureBox4.TabStop = false;
             // 
             // materialLabel5
             // 
@@ -267,6 +279,16 @@
             this.materialButtonNew.UseVisualStyleBackColor = true;
             this.materialButtonNew.Click += new System.EventHandler(this.materialButtonNew_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Coursework.EDairy.Properties.Resources.notes;
+            this.pictureBox1.Location = new System.Drawing.Point(17, 17);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
             // materialLabel1
             // 
             this.materialLabel1.AutoSize = true;
@@ -301,6 +323,16 @@
             this.materialCard3.Size = new System.Drawing.Size(546, 489);
             this.materialCard3.TabIndex = 2;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Coursework.EDairy.Properties.Resources.notebook;
+            this.pictureBox2.Location = new System.Drawing.Point(16, 17);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
+            // 
             // materialLabel2
             // 
             this.materialLabel2.AutoSize = true;
@@ -318,7 +350,7 @@
             this.materialTextBoxGPA.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.materialTextBoxGPA.Depth = 0;
             this.materialTextBoxGPA.Enabled = false;
-            this.materialTextBoxGPA.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.materialTextBoxGPA.Font = new System.Drawing.Font("Roboto", 12F);
             this.materialTextBoxGPA.Hint = "GPA";
             this.materialTextBoxGPA.Location = new System.Drawing.Point(16, 425);
             this.materialTextBoxGPA.MaxLength = 50;
@@ -333,7 +365,7 @@
             // 
             this.materialTextBoxInformatics.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.materialTextBoxInformatics.Depth = 0;
-            this.materialTextBoxInformatics.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.materialTextBoxInformatics.Font = new System.Drawing.Font("Roboto", 12F);
             this.materialTextBoxInformatics.Hint = "Informatics";
             this.materialTextBoxInformatics.Location = new System.Drawing.Point(16, 368);
             this.materialTextBoxInformatics.MaxLength = 50;
@@ -348,7 +380,7 @@
             // 
             this.materialTextBoxEnglish.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.materialTextBoxEnglish.Depth = 0;
-            this.materialTextBoxEnglish.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.materialTextBoxEnglish.Font = new System.Drawing.Font("Roboto", 12F);
             this.materialTextBoxEnglish.Hint = "English";
             this.materialTextBoxEnglish.Location = new System.Drawing.Point(16, 312);
             this.materialTextBoxEnglish.MaxLength = 50;
@@ -363,7 +395,7 @@
             // 
             this.materialTextBoxMathematics.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.materialTextBoxMathematics.Depth = 0;
-            this.materialTextBoxMathematics.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.materialTextBoxMathematics.Font = new System.Drawing.Font("Roboto", 12F);
             this.materialTextBoxMathematics.Hint = "Mathematics";
             this.materialTextBoxMathematics.Location = new System.Drawing.Point(16, 256);
             this.materialTextBoxMathematics.MaxLength = 50;
@@ -378,7 +410,7 @@
             // 
             this.materialTextBoxName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.materialTextBoxName.Depth = 0;
-            this.materialTextBoxName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.materialTextBoxName.Font = new System.Drawing.Font("Roboto", 12F);
             this.materialTextBoxName.Hint = "Name";
             this.materialTextBoxName.Location = new System.Drawing.Point(16, 199);
             this.materialTextBoxName.MaxLength = 50;
@@ -393,7 +425,7 @@
             // 
             this.materialTextBoxGroup.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.materialTextBoxGroup.Depth = 0;
-            this.materialTextBoxGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.materialTextBoxGroup.Font = new System.Drawing.Font("Roboto", 12F);
             this.materialTextBoxGroup.Hint = "Group";
             this.materialTextBoxGroup.Location = new System.Drawing.Point(16, 143);
             this.materialTextBoxGroup.MaxLength = 50;
@@ -409,7 +441,7 @@
             this.materialTextBoxID.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.materialTextBoxID.Depth = 0;
             this.materialTextBoxID.Enabled = false;
-            this.materialTextBoxID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.materialTextBoxID.Font = new System.Drawing.Font("Roboto", 12F);
             this.materialTextBoxID.Hint = "ID";
             this.materialTextBoxID.Location = new System.Drawing.Point(16, 86);
             this.materialTextBoxID.MaxLength = 50;
@@ -466,11 +498,43 @@
             this.materialCard1.Size = new System.Drawing.Size(811, 67);
             this.materialCard1.TabIndex = 0;
             // 
+            // pictureBoxErase
+            // 
+            this.pictureBoxErase.Image = global::Coursework.EDairy.Properties.Resources.eraser;
+            this.pictureBoxErase.Location = new System.Drawing.Point(332, 9);
+            this.pictureBoxErase.Name = "pictureBoxErase";
+            this.pictureBoxErase.Size = new System.Drawing.Size(50, 50);
+            this.pictureBoxErase.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxErase.TabIndex = 10;
+            this.pictureBoxErase.TabStop = false;
+            this.pictureBoxErase.Click += new System.EventHandler(this.pictureBoxErase_Click);
+            // 
+            // pictureBoxRefresh
+            // 
+            this.pictureBoxRefresh.Image = global::Coursework.EDairy.Properties.Resources.refresh;
+            this.pictureBoxRefresh.Location = new System.Drawing.Point(399, 9);
+            this.pictureBoxRefresh.Name = "pictureBoxRefresh";
+            this.pictureBoxRefresh.Size = new System.Drawing.Size(50, 50);
+            this.pictureBoxRefresh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxRefresh.TabIndex = 9;
+            this.pictureBoxRefresh.TabStop = false;
+            this.pictureBoxRefresh.Click += new System.EventHandler(this.pictureBoxRefresh_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Coursework.EDairy.Properties.Resources.notebook;
+            this.pictureBox3.Location = new System.Drawing.Point(521, 9);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 8;
+            this.pictureBox3.TabStop = false;
+            // 
             // materialTextBoxSearch
             // 
             this.materialTextBoxSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.materialTextBoxSearch.Depth = 0;
-            this.materialTextBoxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.materialTextBoxSearch.Font = new System.Drawing.Font("Roboto", 12F);
             this.materialTextBoxSearch.Hint = "Search";
             this.materialTextBoxSearch.Location = new System.Drawing.Point(577, 9);
             this.materialTextBoxSearch.MaxLength = 50;
@@ -579,11 +643,21 @@
             this.materialCard5.Size = new System.Drawing.Size(811, 67);
             this.materialCard5.TabIndex = 1;
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::Coursework.EDairy.Properties.Resources.search;
+            this.pictureBox6.Location = new System.Drawing.Point(521, 9);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 8;
+            this.pictureBox6.TabStop = false;
+            // 
             // materialTextBoxSearchManagement
             // 
             this.materialTextBoxSearchManagement.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.materialTextBoxSearchManagement.Depth = 0;
-            this.materialTextBoxSearchManagement.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.materialTextBoxSearchManagement.Font = new System.Drawing.Font("Roboto", 12F);
             this.materialTextBoxSearchManagement.Hint = "Search";
             this.materialTextBoxSearchManagement.Location = new System.Drawing.Point(577, 9);
             this.materialTextBoxSearchManagement.MaxLength = 50;
@@ -639,78 +713,17 @@
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             this.imageList1.Images.SetKeyName(0, "grid.png");
             this.imageList1.Images.SetKeyName(1, "settings.png");
+            this.imageList1.Images.SetKeyName(2, "rating.png");
             // 
-            // pictureBox4
+            // tabPageGPA
             // 
-            this.pictureBox4.Image = global::Coursework.EDairy.Properties.Resources.growth;
-            this.pictureBox4.Location = new System.Drawing.Point(17, 17);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 6;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Coursework.EDairy.Properties.Resources.notes;
-            this.pictureBox1.Location = new System.Drawing.Point(17, 17);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Coursework.EDairy.Properties.Resources.notebook;
-            this.pictureBox2.Location = new System.Drawing.Point(16, 17);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBoxErase
-            // 
-            this.pictureBoxErase.Image = global::Coursework.EDairy.Properties.Resources.eraser;
-            this.pictureBoxErase.Location = new System.Drawing.Point(332, 9);
-            this.pictureBoxErase.Name = "pictureBoxErase";
-            this.pictureBoxErase.Size = new System.Drawing.Size(50, 50);
-            this.pictureBoxErase.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxErase.TabIndex = 10;
-            this.pictureBoxErase.TabStop = false;
-            this.pictureBoxErase.Click += new System.EventHandler(this.pictureBoxErase_Click);
-            // 
-            // pictureBoxRefresh
-            // 
-            this.pictureBoxRefresh.Image = global::Coursework.EDairy.Properties.Resources.refresh;
-            this.pictureBoxRefresh.Location = new System.Drawing.Point(399, 9);
-            this.pictureBoxRefresh.Name = "pictureBoxRefresh";
-            this.pictureBoxRefresh.Size = new System.Drawing.Size(50, 50);
-            this.pictureBoxRefresh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxRefresh.TabIndex = 9;
-            this.pictureBoxRefresh.TabStop = false;
-            this.pictureBoxRefresh.Click += new System.EventHandler(this.pictureBoxRefresh_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::Coursework.EDairy.Properties.Resources.search;
-            this.pictureBox3.Location = new System.Drawing.Point(521, 9);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 8;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::Coursework.EDairy.Properties.Resources.search;
-            this.pictureBox6.Location = new System.Drawing.Point(521, 9);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 8;
-            this.pictureBox6.TabStop = false;
+            this.tabPageGPA.ImageKey = "rating.png";
+            this.tabPageGPA.Location = new System.Drawing.Point(4, 39);
+            this.tabPageGPA.Name = "tabPageGPA";
+            this.tabPageGPA.Size = new System.Drawing.Size(892, 942);
+            this.tabPageGPA.TabIndex = 2;
+            this.tabPageGPA.Text = "GPA";
+            this.tabPageGPA.UseVisualStyleBackColor = true;
             // 
             // MainWindow
             // 
@@ -728,27 +741,27 @@
             this.tabPageGrid.ResumeLayout(false);
             this.materialCard8.ResumeLayout(false);
             this.materialCard8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.materialCard4.ResumeLayout(false);
             this.materialCard4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.materialCard3.ResumeLayout(false);
             this.materialCard3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.materialCard2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView12)).EndInit();
             this.materialCard1.ResumeLayout(false);
             this.materialCard1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxErase)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRefresh)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.tabPageManagement.ResumeLayout(false);
             this.materialCard6.ResumeLayout(false);
             this.materialCard5.ResumeLayout(false);
             this.materialCard5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.materialCard7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxErase)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRefresh)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -797,5 +810,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private MaterialSkin.Controls.MaterialTextBox materialTextBoxSearch;
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
+        private System.Windows.Forms.TabPage tabPageGPA;
     }
 }
