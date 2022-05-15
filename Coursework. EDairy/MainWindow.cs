@@ -44,14 +44,22 @@ namespace Coursework.EDairy
 
         private void CreateColumns()
         {
-            dataGridView12.Columns.Add("IDStudent", "ID");
-            dataGridView12.Columns.Add("StudentGroup", "Group");
-            dataGridView12.Columns.Add("FullName", "Name");
-            dataGridView12.Columns.Add("Math", "Mathematics");
-            dataGridView12.Columns.Add("Eng", "English");
-            dataGridView12.Columns.Add("Inf", "Informatics");
-            dataGridView12.Columns.Add("GPA", "GPA");
-            dataGridView12.Columns.Add("IsNew", String.Empty);
+            dataGridView1.Columns.Add("IDStudent", "ID");
+            dataGridView1.Columns.Add("StudentGroup", "Group");
+            dataGridView1.Columns.Add("FullName", "Name");
+            dataGridView1.Columns.Add("Math", "Mathematics");
+            dataGridView1.Columns.Add("Eng", "English");
+            dataGridView1.Columns.Add("Inf", "Informatics");
+            dataGridView1.Columns.Add("GPA", "GPA");
+            dataGridView1.Columns.Add("IsNew", String.Empty);
+            dataGridView3.Columns.Add("IDStudent", "ID");
+            dataGridView3.Columns.Add("StudentGroup", "Group");
+            dataGridView3.Columns.Add("FullName", "Name");
+            dataGridView3.Columns.Add("Math", "Mathematics");
+            dataGridView3.Columns.Add("Eng", "English");
+            dataGridView3.Columns.Add("Inf", "Informatics");
+            dataGridView3.Columns.Add("GPA", "GPA");
+            dataGridView3.Columns.Add("IsNew", String.Empty);
         }
 
         private void ClearFields()
@@ -86,7 +94,7 @@ namespace Coursework.EDairy
 
         private void pictureBoxRefresh_Click(object sender, EventArgs e)
         {
-            RefreshDataGrid(dataGridView12);
+            RefreshDataGrid(dataGridView1);
             ClearFields();
         }
 
@@ -106,31 +114,31 @@ namespace Coursework.EDairy
 
         private void DeleteRow()
         {
-            int index = dataGridView12.CurrentCell.RowIndex;
-            dataGridView12.Rows[index].Visible = false;
+            int index = dataGridView1.CurrentCell.RowIndex;
+            dataGridView1.Rows[index].Visible = false;
 
-            if (dataGridView12.Rows[index].Cells[0].Value.ToString() == string.Empty)
+            if (dataGridView1.Rows[index].Cells[0].Value.ToString() == string.Empty)
             {
-                dataGridView12.Rows[index].Cells[7].Value = RowState.Deleted;
+                dataGridView1.Rows[index].Cells[7].Value = RowState.Deleted;
                 return;
             }
-            dataGridView12.Rows[index].Cells[7].Value = RowState.Deleted;
+            dataGridView1.Rows[index].Cells[7].Value = RowState.Deleted;
 
         }
 
         private void Update()
         {
             database.openConnection();
-            for (int index = 0; index < dataGridView12.Rows.Count; index++)
+            for (int index = 0; index < dataGridView1.Rows.Count; index++)
             {
-                var rowState = (RowState)dataGridView12.Rows[index].Cells[7].Value;
+                var rowState = (RowState)dataGridView1.Rows[index].Cells[7].Value;
 
                 if (rowState == RowState.Existed)
                     continue;
 
                 if (rowState == RowState.Deleted)
                 {
-                    var id = Convert.ToInt32(dataGridView12.Rows[index].Cells[0].Value);
+                    var id = Convert.ToInt32(dataGridView1.Rows[index].Cells[0].Value);
                     var deleteQuery = $"delete from MainGrid where IDStudent = {id}";
                     var command = new SqlCommand(deleteQuery, database.getConnection());
                     command.ExecuteNonQuery();
@@ -138,12 +146,12 @@ namespace Coursework.EDairy
 
                 if (rowState == RowState.Modified)
                 {
-                    var id = dataGridView12.Rows[index].Cells[0].Value.ToString();
-                    var group = dataGridView12.Rows[index].Cells[1].Value.ToString();
-                    var name = dataGridView12.Rows[index].Cells[2].Value.ToString();
-                    var math = dataGridView12.Rows[index].Cells[3].Value.ToString();
-                    var eng = dataGridView12.Rows[index].Cells[4].Value.ToString();
-                    var inf = dataGridView12.Rows[index].Cells[5].Value.ToString();
+                    var id = dataGridView1.Rows[index].Cells[0].Value.ToString();
+                    var group = dataGridView1.Rows[index].Cells[1].Value.ToString();
+                    var name = dataGridView1.Rows[index].Cells[2].Value.ToString();
+                    var math = dataGridView1.Rows[index].Cells[3].Value.ToString();
+                    var eng = dataGridView1.Rows[index].Cells[4].Value.ToString();
+                    var inf = dataGridView1.Rows[index].Cells[5].Value.ToString();
                     var changeQuery = $"update MainGrid set StudentGroup = '{group}', FullName = '{name}', Math = '{math}', Eng = '{eng}', Inf = '{inf}' where IDStudent = '{id}'";
                     var command = new SqlCommand(changeQuery, database.getConnection());
                     command.ExecuteNonQuery();
@@ -154,7 +162,7 @@ namespace Coursework.EDairy
 
         private void materialTextBoxSearch_TextChanged(object sender, EventArgs e)
         {
-            Search(dataGridView12);
+            Search(dataGridView1);
         }
 
         private void materialButtonDelete_Click(object sender, EventArgs e)
@@ -170,7 +178,7 @@ namespace Coursework.EDairy
 
         private void Change()
         {
-            var selectedRowIndex = dataGridView12.CurrentCell.RowIndex;
+            var selectedRowIndex = dataGridView1.CurrentCell.RowIndex;
 
             var id = materialTextBoxID.Text;
             var group = materialTextBoxGroup.Text;
@@ -180,14 +188,14 @@ namespace Coursework.EDairy
             double inf;
 
 
-            if (dataGridView12.Rows[selectedRowIndex].Cells[0].Value.ToString() != string.Empty)
+            if (dataGridView1.Rows[selectedRowIndex].Cells[0].Value.ToString() != string.Empty)
             {
                 if (double.TryParse(materialTextBoxMathematics.Text, out math)
                     && double.TryParse(materialTextBoxEnglish.Text, out eng)
                     && double.TryParse(materialTextBoxInformatics.Text, out inf))
                 {
-                    dataGridView12.Rows[selectedRowIndex].SetValues(id, group, name, math, eng, inf, ((math+eng+inf)/3));
-                    dataGridView12.Rows[selectedRowIndex].Cells[7].Value = RowState.Modified;
+                    dataGridView1.Rows[selectedRowIndex].SetValues(id, group, name, math, eng, inf, ((math+eng+inf)/3));
+                    dataGridView1.Rows[selectedRowIndex].Cells[7].Value = RowState.Modified;
 
                 }
                 else
@@ -221,7 +229,8 @@ namespace Coursework.EDairy
             materialTextBoxStatus.Text = $"{_user.Login}";
             IsAdmin();
             CreateColumns();
-            RefreshDataGrid(dataGridView12);
+            RefreshDataGrid(dataGridView1);
+            RefreshDataGrid(dataGridView3);
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -229,7 +238,7 @@ namespace Coursework.EDairy
             selectedRow = e.RowIndex;
             if (e.RowIndex >= 0)
             {
-                DataGridViewRow row = dataGridView12.Rows[selectedRow];
+                DataGridViewRow row = dataGridView1.Rows[selectedRow];
                 materialTextBoxID.Text = row.Cells[0].Value.ToString();
                 materialTextBoxGroup.Text = row.Cells[1].Value.ToString();
                 materialTextBoxName.Text = row.Cells[2].Value.ToString();
@@ -343,6 +352,26 @@ namespace Coursework.EDairy
         {
             AddForm frm = new AddForm();
             frm.Show();
+        }
+
+        private void materialTextBoxFind_TextChanged(object sender, EventArgs e)
+        {
+            dataGridView3.Rows.Clear();
+            string searchString = $"select * from MainGrid where GPA > '{materialTextBoxFind.Text}'";
+            SqlCommand command = new SqlCommand(searchString, database.getConnection());
+            database.openConnection();
+            SqlDataReader read = command.ExecuteReader();
+            while (read.Read())
+            {
+                ReadSingleRow(dataGridView3, read);
+            }
+            read.Close();
+
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
